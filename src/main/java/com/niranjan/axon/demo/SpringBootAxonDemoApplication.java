@@ -1,4 +1,4 @@
-package com.niranjan.axon.springbootaxondemo;
+package com.niranjan.axon.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

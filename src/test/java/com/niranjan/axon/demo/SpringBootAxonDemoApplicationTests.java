@@ -1,4 +1,4 @@
-package com.niranjan.axon.springbootaxondemo;
+package com.niranjan.axon.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
