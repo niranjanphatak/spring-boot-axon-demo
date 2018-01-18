@@ -1,6 +1,8 @@
 package com.niranjan.axon.demo.controller;
 
-public class CreateAccountRequest {
+import lombok.Data;
 
-	public String name;
+@Data
+public class CreateAccountRequest {
+  private String name;
 }
