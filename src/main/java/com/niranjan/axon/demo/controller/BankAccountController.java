@@ -1,6 +1,7 @@
 package com.niranjan.axon.demo.controller;
 
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,10 +24,10 @@ public class BankAccountController {
   }
 
   @PostMapping("/create")
-  public boolean createAccount(@RequestBody CreateAccountRequest createAccountRequest) {
-    this.commandGateway.send(
+  public  CompletableFuture<Object> createAccount(@RequestBody CreateAccountRequest createAccountRequest) {
+    return this.commandGateway.send(
         new CreateAccountCommand(UUID.randomUUID().toString(), createAccountRequest.getName()));
-    return true;
+    
   }
 
 }
