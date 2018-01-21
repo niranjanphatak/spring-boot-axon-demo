@@ -31,7 +31,10 @@ public class BankAccount implements Serializable {
     Assert.hasLength(ownerName, "Missing Account Creator Name");
 
     AggregateLifecycle.apply(new AccountCreatedEvent(this.id, this.ownerName, 0.0));
+  }
 
+  public BankAccount() {
+    // constructor needed for reconstruction
   }
 
   @EventSourcingHandler

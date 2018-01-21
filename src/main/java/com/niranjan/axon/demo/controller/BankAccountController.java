@@ -24,7 +24,7 @@ public class BankAccountController {
   }
 
   @PostMapping("/create")
-  public  CompletableFuture<Object> createAccount(@RequestBody CreateAccountRequest createAccountRequest) {
+  public  CompletableFuture<String> createAccount(@RequestBody CreateAccountRequest createAccountRequest) {
     return this.commandGateway.send(
         new CreateAccountCommand(UUID.randomUUID().toString(), createAccountRequest.getName()));
     
