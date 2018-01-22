@@ -6,11 +6,12 @@ import org.axonframework.commandhandling.model.AggregateIdentifier;
 import org.axonframework.commandhandling.model.AggregateLifecycle;
 import org.axonframework.commandhandling.model.AggregateRoot;
 import org.axonframework.eventsourcing.EventSourcingHandler;
+import org.axonframework.spring.stereotype.Aggregate;
 import org.springframework.util.Assert;
 import com.niranjan.axon.demo.command.CreateAccountCommand;
 import com.niranjan.axon.demo.events.AccountCreatedEvent;
 
-@AggregateRoot
+@Aggregate
 public class BankAccount implements Serializable {
 
   private static final long serialVersionUID = 1L;
